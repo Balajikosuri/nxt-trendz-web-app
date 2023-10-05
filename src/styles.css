@@ -1,0 +1,37 @@
+.dark-mode-bg {
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-mode-header-bg {
+  background-color: #282829;
+  color: #fff;
+}
+.dark-mode-font-clr {
+  color: #fff;
+  font-weight: 400;
+}
+.dark-mode-bold-font-clr {
+  color: #fff;
+  font-weight: bold;
+}
+
+.dark-mode-description-font-clr {
+  color: rgb(246, 242, 242);
+  font-weight: 300;
+}
+.dark-mode-desc-font-clr {
+  color: rgb(246, 242, 242);
+}
+.dark-mode-card-bg {
+  background-color: #2b2e2c;
+  /* box-shadow: 8px 0px 16px 0px #ffffff60; */
+  box-shadow: none;
+}
+.dark-mode-blue {
+  color: #4749bf;
+  font-weight: bold;
+}
+.my-div {
+  height: 100vh;
+  overflow: auto;
+}

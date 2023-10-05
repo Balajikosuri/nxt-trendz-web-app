@@ -1,0 +1,156 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  width: 90%;
+  max-width: 1110px;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 96px;
+  }
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: red !important; */
+}
+
+@media screen and (min-width: 768px) {
+  .home-content {
+    align-items: flex-start;
+  }
+}
+
+.home-mobile-img {
+  width: 206px;
+}
+
+@media screen and (min-width: 768px) {
+  .home-mobile-img {
+    display: none;
+  }
+}
+
+.home-desktop-img {
+  width: 50%;
+  max-width: 450px;
+  margin-left: 85px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-desktop-img {
+    display: none;
+  }
+}
+
+.home-heading {
+  color: #1e293b;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-heading {
+    font-size: 46px;
+    text-align: left;
+  }
+}
+
+.home-description {
+  font-family: 'Roboto';
+  margin-top: 36px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #64748b;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-description {
+    font-size: 18px;
+    margin-top: 0px;
+    text-align: left;
+  }
+}
+
+.shop-now-button {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: #ffffff;
+  border: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 6px;
+  background-color: #0967d2;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .shop-now-button {
+    width: 150px;
+    font-size: 16px;
+  }
+}
+/*  */
+.dark-theme-bg {
+  background-color: #121212;
+}
+/* background-color: #1e1c1c; */
+
+/* dark-theme-stuff-css */
+.dark-mode-bg {
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-mode-header-bg {
+  background-color: #282829;
+  color: #fff;
+}
+.dark-mode-font-clr {
+  color: #fff;
+  font-weight: 400;
+}
+.dark-mode-bold-font-clr {
+  color: #fff;
+  font-weight: bold;
+}
+
+.dark-mode-description-font-clr {
+  color: rgb(246, 242, 242);
+  font-weight: 300;
+}
+.dark-mode-desc-font-clr {
+  color: rgb(246, 242, 242);
+}
+.dark-mode-card-bg {
+  background-color: #2b2e2c;
+  /* box-shadow: 8px 0px 16px 0px #ffffff60; */
+  box-shadow: none;
+}
+.dark-mode-blue {
+  color: #4749bf;
+  font-weight: bold;
+}
+.my-div {
+  height: 100vh;
+  overflow: auto;
+}
+/*  */

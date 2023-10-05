@@ -1,0 +1,91 @@
+.cart-list {
+  padding-left: 0px;
+}
+.CartListView-container {
+  display: flex;
+  flex-direction: column;
+}
+.remove-all-btn {
+  cursor: pointer;
+  color: #0b69ff;
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  align-self: flex-end;
+}
+.summary-checkout-container {
+  margin-top: 5%;
+  align-self: flex-end;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15%;
+  position: fixed;
+  bottom: 0;
+  /* width: 100%; */
+}
+.Order-Total {
+  font-size: 20px;
+  color: #616e7c;
+  line-height: 0;
+}
+.sub-Order-Total {
+  font-size: 21px;
+  color: #000000;
+  font-weight: bold;
+}
+.no-of-items {
+  font-size: 14px;
+  color: #616e7c;
+  line-height: 0;
+}
+
+.checkout-button {
+  padding: 6px 20%;
+  background-color: #0b69ff;
+  border: none;
+  margin-top: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 8px;
+}
+/* dark-theme-stuff-css */
+.dark-mode-bg {
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-mode-header-bg {
+  background-color: #282829;
+  color: #fff;
+}
+.dark-mode-font-clr {
+  color: #fff;
+  font-weight: 400;
+}
+.dark-mode-bold-font-clr {
+  color: #fff;
+  font-weight: bold;
+}
+
+.dark-mode-description-font-clr {
+  color: rgb(246, 242, 242);
+  font-weight: 300;
+}
+.dark-mode-desc-font-clr {
+  color: rgb(246, 242, 242);
+}
+.dark-mode-card-bg {
+  background-color: #2b2e2c;
+  /* box-shadow: 8px 0px 16px 0px #ffffff60; */
+  box-shadow: none;
+}
+.dark-mode-blue {
+  color: #4749bf;
+  font-weight: bold;
+}
+.my-div {
+  height: 100vh;
+  overflow: auto;
+}
+/*  */
