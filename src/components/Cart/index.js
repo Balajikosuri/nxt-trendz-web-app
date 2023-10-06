@@ -9,7 +9,7 @@ import './index.css'
 const Cart = () => (
   <CartContext.Consumer>
     {value => {
-      const {cartList} = value
+      const {cartList, isDarkTheme} = value
       const showEmptyView = cartList.length === 0
 
       return (
@@ -20,7 +20,11 @@ const Cart = () => (
               <EmptyCartView />
             ) : (
               <div className="cart-content-container">
-                <h1 className="cart-heading">My Cart</h1>
+                <h1
+                  className={`cart-heading ${isDarkTheme && 'dark-mode-blue'}`}
+                >
+                  My Cart
+                </h1>
                 <CartListView />
               </div>
             )}

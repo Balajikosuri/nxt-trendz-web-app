@@ -268,3 +268,51 @@
   overflow: auto;
 }
 /*  */
+.nav-menu-item a {
+  /* background: #f0f0f0; */
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-right: 10px;
+}
+/* 
+.active {
+  background-color: red;
+  font-weight: bold;
+} */
+
+.nav-menu a.active {
+  color: #fff;
+  background: #7600dc;
+}
+.nav-menu a.inactive {
+  /* font-style: italic; */
+  background-color: none;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 400;
+}
+.nav-menu {
+  margin-bottom: 5px;
+}
+/* ddddddddd */
+
+.nav-menu-item-mobile a.active {
+  color: #fff;
+  color: #fc2beb;
+  font-weight: bold;
+}
+.nav-menu-item-mobile a.inactive {
+  /* font-style: italic; */
+  background-color: none;
+}
+.nav-menu-item-mobile a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 400;
+}
+.nav-menu-item-mobile {
+  margin-bottom: 5px;
+}
+/* ddddddddd */

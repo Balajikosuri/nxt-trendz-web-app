@@ -12,6 +12,7 @@ import CartContext from './context/CartContext'
 
 import './App.css'
 import CopyrightBar from './components/copyright'
+import PaymentLoder from './components/PaymentLoder'
 
 class App extends Component {
   state = {
@@ -93,19 +94,22 @@ class App extends Component {
         }}
       >
         <div className={`app ${isDarkTheme && 'dark-mode-bg'}`}>
-          <Switch>
-            <Route exact path="/login" component={LoginForm} />
-            <ProtectedRoute exact path="/" component={Home} />
-            <ProtectedRoute exact path="/products" component={Products} />
-            <ProtectedRoute
-              exact
-              path="/products/:id"
-              component={ProductItemDetails}
-            />
-            <ProtectedRoute exact path="/cart" component={Cart} />
-            <Route path="/not-found" component={NotFound} />
-            <Redirect to="not-found" />
-          </Switch>
+          <>
+            <Switch>
+              <Route exact path="/login" component={LoginForm} />
+              <ProtectedRoute exact path="/home" component={Home} />
+              <ProtectedRoute exact path="/products" component={Products} />
+              <ProtectedRoute
+                exact
+                path="/products/:id"
+                component={ProductItemDetails}
+              />
+              <ProtectedRoute exact path="/cart" component={Cart} />
+              <ProtectedRoute exact path="/checkout" component={PaymentLoder} />
+              <Route path="/not-found" component={NotFound} />
+              <Redirect to="not-found" />
+            </Switch>
+          </>
           <CopyrightBar />
         </div>
       </CartContext.Provider>

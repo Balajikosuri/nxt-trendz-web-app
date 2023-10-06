@@ -1,6 +1,7 @@
-import {Link, withRouter} from 'react-router-dom'
+import {NavLink, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
-// import {AiFillHome} from 'react-icons/ai'
+
+import {AiFillHome, AiTwotoneShop, AiOutlineShoppingCart} from 'react-icons/ai'
 
 import CartContext from '../../context/CartContext'
 
@@ -64,7 +65,7 @@ const Header = props => {
           <nav className={`nav-header ${isDarkTheme && 'dark-mode-header-bg'}`}>
             <div className="nav-content">
               <div className="nav-bar-mobile-logo-container">
-                <Link to="/">
+                <NavLink to="/home">
                   <img
                     className="website-logo"
                     src={
@@ -74,7 +75,7 @@ const Header = props => {
                     }
                     alt="website logo"
                   />
-                </Link>
+                </NavLink>
                 <div className="btn-group">
                   {renderThemeChanger()}
                   <button
@@ -92,7 +93,7 @@ const Header = props => {
               </div>
 
               <div className="nav-bar-large-container">
-                <Link to="/">
+                <NavLink to="/home">
                   <img
                     className="website-logo"
                     src={
@@ -102,40 +103,47 @@ const Header = props => {
                     }
                     alt="website logo"
                   />
-                </Link>
+                </NavLink>
                 <ul className="nav-menu">
                   <li className="nav-menu-item">
-                    <Link
-                      to="/"
-                      className={`nav-link ${
-                        isDarkTheme && 'dark-mode-font-clr'
-                      }`}
+                    <NavLink
+                      to="/home"
+                      className={({isActive}) =>
+                        isActive ? 'active' : 'inactive'
+                      }
                     >
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
 
                   <li className="nav-menu-item">
-                    <Link
+                    <NavLink
                       to="/products"
-                      className={`nav-link ${
-                        isDarkTheme && 'dark-mode-font-clr'
-                      }`}
+                      className={({isActive}) =>
+                        isActive ? 'active' : 'inactive'
+                      }
                     >
                       Products
-                    </Link>
+                    </NavLink>
                   </li>
 
-                  <li className="nav-menu-item">
-                    <Link
+                  <li
+                    style={{color: isDarkTheme && '#fff'}}
+                    className="nav-menu-item"
+                  >
+                    <NavLink
                       to="/cart"
-                      className={`nav-link ${
-                        isDarkTheme && 'dark-mode-font-clr'
-                      }`}
+                      className={({isActive}) =>
+                        'inactive'`nav-link
+                         ${isActive && 'active'}
+                         ${isDarkTheme && 'dark-mode-font-clr'}
+                       
+                        `
+                      }
                     >
                       Cart
                       {renderCartItemsCount()}
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
 
@@ -157,53 +165,69 @@ const Header = props => {
                 }`}
               >
                 <li className="nav-menu-item-mobile">
-                  <Link
-                    to="/"
+                  <NavLink
+                    to="/home"
                     className={`nav-link ${
                       isDarkTheme && 'dark-mode-font-clr'
                     }`}
                   >
-                    {/* <AiFillHome
-                      className="mobile-tabicons"
-                      size={24}
-                      color="#6161ed"
-                    /> */}
-                    <img
+                    <AiFillHome
+                      className={({isActive}) =>
+                        `
+                         ${isActive && 'active'}
+                         ${isDarkTheme && 'dark-mode-font-clr'}
+                       
+                        `
+                      }
+                      size={25}
+                    />
+                    {/* TODO: */}
+                    {/* <img
                       src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
                       alt="nav home"
                       className="nav-bar-img"
-                    />
-                  </Link>
+                    /> */}
+                  </NavLink>
                 </li>
 
                 <li className="nav-menu-item-mobile">
-                  <Link
+                  <NavLink
                     to="/products"
                     className={`nav-link ${
                       isDarkTheme && 'dark-mode-font-clr'
                     }`}
                   >
-                    <img
-                      src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
-                      alt="nav products"
-                      className="nav-bar-img"
+                    <AiTwotoneShop
+                      className={({isActive}) =>
+                        'mobile-tabicons'`
+                         ${isActive && 'active'}
+                         ${isDarkTheme && 'dark-mode-font-clr'}
+                       
+                        `
+                      }
+                      size={25}
                     />
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-menu-item-mobile">
-                  <Link
+                  <NavLink
                     to="/cart"
                     className={`nav-link ${
                       isDarkTheme && 'dark-mode-font-clr'
                     }`}
                   >
-                    <img
-                      src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
-                      alt="nav cart"
-                      className="nav-bar-img"
+                    <AiOutlineShoppingCart
+                      className={({isActive}) =>
+                        'mobile-tabicons'`
+                         ${isActive && 'active'}
+                         ${isDarkTheme && 'dark-mode-font-clr'}
+                       
+                        `
+                      }
+                      size={25}
                     />
                     {renderCartItemsCount()}
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>

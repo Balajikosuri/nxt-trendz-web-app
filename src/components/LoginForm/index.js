@@ -32,7 +32,7 @@ class LoginForm extends Component {
     Cookies.set('jwt_token', jwtToken, {
       expires: 30,
     })
-    history.replace('/')
+    history.replace('/home')
   }
 
   onSubmitFailure = errorMsg => {
@@ -122,7 +122,7 @@ class LoginForm extends Component {
     const jwtToken = Cookies.get('jwt_token')
 
     if (jwtToken !== undefined) {
-      return <Redirect to="/" />
+      return <Redirect to="/home" />
     }
 
     return (
@@ -177,8 +177,8 @@ class LoginForm extends Component {
                     id="toggle-password"
                     className="my-checkbox"
                   />
-                  <label htmlFor="toggle-password" className="my-label">
-                    Show password
+                  <label htmlFor="toggle-password">
+                    <b>Show password</b>{' '}
                   </label>
                 </div>
                 <button type="submit" className="login-button">

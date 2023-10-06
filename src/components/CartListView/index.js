@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import CartItem from '../CartItem'
 import CartContext from '../../context/CartContext'
 
@@ -46,9 +47,11 @@ const CartListView = () => (
               className={`no-of-items${isDarkTheme && 'dark-mode-font-clr'}`}
             >{`${numberOfItems} items in cart`}</p>
             <div className="button-container">
-              <button className="checkout-button" type="button">
-                Checkout
-              </button>
+              <Link to="/checkout">
+                <button className="checkout-button" type="button">
+                  Checkout
+                </button>
+              </Link>
             </div>
           </div>
         </div>
