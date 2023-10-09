@@ -95,8 +95,9 @@ class App extends Component {
       >
         <div className={`app ${isDarkTheme && 'dark-mode-bg'}`}>
           <>
-            <Switch>
+            <Switch basename="/home">
               <Route exact path="/login" component={LoginForm} />
+              <ProtectedRoute exact path="/" component={Home} />
               <ProtectedRoute exact path="/home" component={Home} />
               <ProtectedRoute exact path="/products" component={Products} />
               <ProtectedRoute
